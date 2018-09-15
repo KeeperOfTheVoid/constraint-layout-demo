@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ConstraintLayoutDemo</string>
     <string name="movie_poster">Movie Poster</string>
+    <string name="movie_title">Beauty and the Beast</string>
 </resources>
