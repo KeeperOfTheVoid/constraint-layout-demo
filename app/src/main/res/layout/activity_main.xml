@@ -91,7 +91,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
-        app:constraint_referenced_ids="textView_movie_details,imageView_poster" />
+        app:constraint_referenced_ids="textView_movie_details,imageView_poster"
+        tools:layout_editor_absoluteY="291dp" />
 
     <Button
         android:id="@+id/button_rent"
@@ -120,5 +121,16 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_rent"
         app:layout_constraintTop_toTopOf="@+id/barrier_bottom_poster" />
+
+    <!-- Bug with FAB.  Won't render polygon.  Only circle -->
+
+    <!--<android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_type"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/ic_google_play_polygon" />-->
 
 </android.support.constraint.ConstraintLayout>
