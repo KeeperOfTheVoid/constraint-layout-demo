@@ -4,4 +4,6 @@
     <string name="movie_title">Beauty and the Beast</string>
     <string name="bookmark">Bookmark</string>
     <string name="movie_details">March 2017 | PG | 129 minutes</string>
+    <string name="rent">RENT FROM $2.99</string>
+    <string name="buy">BUY FROM $13.99</string>
 </resources>
