@@ -34,3 +34,4 @@ local.properties
 proguard/
 *.log
 *.log.*
+app/release

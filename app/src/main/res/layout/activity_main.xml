@@ -1,292 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView_header"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="@null"
-        app:layout_constraintDimensionRatio="16:9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/header" />
 
-    <ImageView
-        android:id="@+id/imageView_poster"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="@string/movie_poster"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView_header"
-        app:layout_constraintDimensionRatio="2:3"
-        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_start"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_header"
-        app:srcCompat="@drawable/poster" />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView_movie_title"
-        android:layout_width="0dp"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/movie_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton_add_to_playlist"
-        app:layout_constraintStart_toEndOf="@+id/imageView_poster"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_header"
-        tools:text="Beauty and the Beast" />
+        tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/imageButton_add_to_playlist"
-        android:layout_width="20dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="?attr/selectableItemBackground"
-        android:contentDescription="@string/bookmark"
-        android:tint="@color/colorAccent"
-        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_end"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_header"
-        app:srcCompat="@drawable/ic_bookmark" />
+        <ImageView
+            android:id="@+id/imageView_header"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@null"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/header" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_vertical_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
+        <ImageView
+            android:id="@+id/imageView_poster"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/movie_poster"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_header"
+            app:layout_constraintDimensionRatio="2:3"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vertical_start"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_header"
+            app:srcCompat="@drawable/poster" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_vertical_end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp" />
+        <TextView
+            android:id="@+id/textView_movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/movie_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton_add_to_playlist"
+            app:layout_constraintStart_toEndOf="@+id/imageView_poster"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_header"
+            tools:text="Beauty and the Beast" />
 
-    <TextView
-        android:id="@+id/textView_movie_details"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/movie_details"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
-        app:layout_constraintStart_toEndOf="@+id/imageView_poster"
-        app:layout_constraintTop_toBottomOf="@+id/textView_movie_title"
-        tools:text="March 2017 | PG | 129 minutes" />
+        <ImageButton
+            android:id="@+id/imageButton_add_to_playlist"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="@string/bookmark"
+            android:tint="@color/colorAccent"
+            app:layout_constraintEnd_toStartOf="@id/guideline_vertical_end"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_header"
+            app:srcCompat="@drawable/ic_bookmark" />
 
-    <android.support.constraint.Barrier
-        android:id="@+id/barrier_bottom_poster"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="textView_movie_details,imageView_poster" />
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_vertical_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
 
-    <Button
-        android:id="@+id/button_rent"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/rent"
-        app:layout_constraintEnd_toStartOf="@+id/button_buy"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_start"
-        app:layout_constraintTop_toTopOf="@+id/barrier_bottom_poster" />
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_vertical_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
 
-    <Button
-        android:id="@+id/button_buy"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/buy"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_rent"
-        app:layout_constraintTop_toTopOf="@+id/barrier_bottom_poster" />
+        <TextView
+            android:id="@+id/textView_movie_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/movie_details"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
+            app:layout_constraintStart_toEndOf="@+id/imageView_poster"
+            app:layout_constraintTop_toBottomOf="@+id/textView_movie_title"
+            tools:text="March 2017 | PG | 129 minutes" />
 
-    <View
-        android:id="@+id/view_divider_above"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/gray_divider"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
-        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_start"
-        app:layout_constraintTop_toTopOf="@+id/barrier_bottom_action_buttons" />
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier_bottom_poster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="textView_movie_details,imageView_poster" />
 
-    <android.support.constraint.Barrier
-        android:id="@+id/barrier_bottom_action_buttons"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="0dp"
-        app:barrierDirection="bottom"
-        app:constraint_referenced_ids="button_buy,button_rent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="354dp" />
+        <Button
+            android:id="@+id/button_rent"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/rent"
+            app:layout_constraintEnd_toStartOf="@+id/button_buy"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/guideline_vertical_start"
+            app:layout_constraintTop_toTopOf="@+id/barrier_bottom_poster" />
 
-    <!-- Original Demo implements this differently. Will just use FAB. -->
+        <Button
+            android:id="@+id/button_buy"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/buy"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_rent"
+            app:layout_constraintTop_toTopOf="@+id/barrier_bottom_poster" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_rating"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="32dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintEnd_toStartOf="@+id/fab_type"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_start"
-        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_start"
-        app:layout_constraintTop_toTopOf="@+id/barrier_bottom_action_buttons"
-        app:srcCompat="@drawable/ic_bookmark" />
+        <View
+            android:id="@+id/view_divider_above"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/gray_divider"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vertical_start"
+            app:layout_constraintTop_toTopOf="@+id/barrier_bottom_action_buttons" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_type"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="32dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintEnd_toStartOf="@+id/fab_tomato"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/fab_rating"
-        app:layout_constraintTop_toTopOf="@+id/barrier_bottom_action_buttons"
-        app:srcCompat="@drawable/ic_family" />
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier_bottom_action_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="button_buy,button_rent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="354dp" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_tomato"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="32dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:backgroundTint="#FFF9C4"
-        app:layout_constraintEnd_toStartOf="@+id/fab_similar"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/fab_type"
-        app:layout_constraintTop_toTopOf="@+id/barrier_bottom_action_buttons"
-        app:srcCompat="@drawable/tomato" />
+        <!-- Original Demo implements this differently. Will just use FAB. -->
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_similar"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/fab_tomato"
-        app:layout_constraintTop_toTopOf="@+id/barrier_bottom_action_buttons"
-        app:srcCompat="@drawable/ic_similar" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_rating"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toStartOf="@+id/fab_type"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/guideline_vertical_start"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vertical_start"
+            app:layout_constraintTop_toTopOf="@+id/barrier_bottom_action_buttons"
+            app:srcCompat="@drawable/ic_bookmark" />
 
-    <TextView
-        android:id="@+id/textView_rating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/rating"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintEnd_toEndOf="@+id/fab_rating"
-        app:layout_constraintStart_toStartOf="@+id/fab_rating"
-        app:layout_constraintTop_toBottomOf="@+id/fab_rating"
-        tools:text="242 ratings" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_type"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toStartOf="@+id/fab_tomato"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fab_rating"
+            app:layout_constraintTop_toTopOf="@+id/barrier_bottom_action_buttons"
+            app:srcCompat="@drawable/ic_family" />
 
-    <TextView
-        android:id="@+id/textView_type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/genre"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintStart_toStartOf="@+id/fab_type"
-        app:layout_constraintTop_toBottomOf="@+id/fab_type"
-        tools:text="Family" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_tomato"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="#FFF9C4"
+            app:layout_constraintEnd_toStartOf="@+id/fab_similar"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fab_type"
+            app:layout_constraintTop_toTopOf="@+id/barrier_bottom_action_buttons"
+            app:srcCompat="@drawable/tomato" />
 
-    <TextView
-        android:id="@+id/textView_tomato"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/tomato_rating"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintEnd_toEndOf="@+id/fab_tomato"
-        app:layout_constraintStart_toStartOf="@+id/fab_tomato"
-        app:layout_constraintTop_toBottomOf="@+id/fab_tomato"
-        tools:text="71%" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_similar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fab_tomato"
+            app:layout_constraintTop_toTopOf="@+id/barrier_bottom_action_buttons"
+            app:srcCompat="@drawable/ic_similar" />
 
-    <TextView
-        android:id="@+id/textView_similar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/similar"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintEnd_toEndOf="@+id/fab_similar"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/fab_similar"
-        app:layout_constraintTop_toBottomOf="@+id/fab_similar"
-        tools:text="Similar" />
+        <TextView
+            android:id="@+id/textView_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/rating"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:layout_constraintEnd_toEndOf="@+id/fab_rating"
+            app:layout_constraintStart_toStartOf="@+id/fab_rating"
+            app:layout_constraintTop_toBottomOf="@+id/fab_rating"
+            tools:text="242 ratings" />
 
-    <View
-        android:id="@+id/view_divider_below"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/gray_divider"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
-        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_start"
-        app:layout_constraintTop_toBottomOf="@+id/textView_type" />
+        <TextView
+            android:id="@+id/textView_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/genre"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:layout_constraintStart_toStartOf="@+id/fab_type"
+            app:layout_constraintTop_toBottomOf="@+id/fab_type"
+            tools:text="Family" />
 
-    <TextView
-        android:id="@+id/textview_description"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:paddingBottom="16dp"
-        android:text="@string/movie_description"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="18sp"
-        app:fontFamily="sans-serif"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_start"
-        app:layout_constraintTop_toBottomOf="@+id/textView_type" />
+        <TextView
+            android:id="@+id/textView_tomato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/tomato_rating"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:layout_constraintEnd_toEndOf="@+id/fab_tomato"
+            app:layout_constraintStart_toStartOf="@+id/fab_tomato"
+            app:layout_constraintTop_toBottomOf="@+id/fab_tomato"
+            tools:text="71%" />
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView_similar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/similar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:layout_constraintEnd_toEndOf="@+id/fab_similar"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/fab_similar"
+            app:layout_constraintTop_toBottomOf="@+id/fab_similar"
+            tools:text="Similar" />
+
+        <View
+            android:id="@+id/view_divider_below"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/gray_divider"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vertical_start"
+            app:layout_constraintTop_toBottomOf="@+id/textView_type" />
+
+        <TextView
+            android:id="@+id/textview_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:paddingBottom="16dp"
+            android:text="@string/movie_description"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp"
+            app:fontFamily="sans-serif"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vertical_start"
+            app:layout_constraintTop_toBottomOf="@+id/textView_type" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
