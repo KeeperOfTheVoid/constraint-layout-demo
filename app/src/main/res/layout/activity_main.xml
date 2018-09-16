@@ -121,6 +121,16 @@
         app:layout_constraintStart_toEndOf="@+id/button_rent"
         app:layout_constraintTop_toTopOf="@+id/barrier_bottom_poster" />
 
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/gray_divider"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_start"
+        app:layout_constraintTop_toTopOf="@+id/barrier_bottom_action_buttons" />
+
     <android.support.constraint.Barrier
         android:id="@+id/barrier_bottom_action_buttons"
         android:layout_width="wrap_content"
@@ -136,11 +146,13 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="354dp" />
 
+    <!-- Original Demo implements this differently. Will just use FAB. -->
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_rating"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:clickable="true"
         android:focusable="true"
         app:layout_constraintEnd_toStartOf="@+id/fab_type"
@@ -154,7 +166,7 @@
         android:id="@+id/fab_type"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:clickable="true"
         android:focusable="true"
         app:layout_constraintEnd_toStartOf="@+id/fab_tomato"
@@ -167,7 +179,7 @@
         android:id="@+id/fab_tomato"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:clickable="true"
         android:focusable="true"
         app:backgroundTint="#FFF9C4"
@@ -181,7 +193,9 @@
         android:id="@+id/fab_similar"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
         android:clickable="true"
         android:focusable="true"
         app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_end"
@@ -190,17 +204,60 @@
         app:layout_constraintTop_toTopOf="@+id/barrier_bottom_action_buttons"
         app:srcCompat="@drawable/ic_similar" />
 
-    <!-- Bug with FAB.  Won't render polygon.  Only circle -->
+    <TextView
+        android:id="@+id/textView_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/rating"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="@+id/fab_rating"
+        app:layout_constraintStart_toStartOf="@+id/fab_rating"
+        app:layout_constraintTop_toBottomOf="@+id/fab_rating"
+        tools:text="242 ratings" />
 
-    <!-- Original Demo implements this differently. Will just use FAB. -->
+    <TextView
+        android:id="@+id/textView_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/genre"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintStart_toStartOf="@+id/fab_type"
+        app:layout_constraintTop_toBottomOf="@+id/fab_type"
+        tools:text="Family" />
 
-    <!--<android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_type"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="32dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:srcCompat="@drawable/ic_google_play_polygon" />-->
+    <TextView
+        android:id="@+id/textView_tomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tomato_rating"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="@+id/fab_tomato"
+        app:layout_constraintStart_toStartOf="@+id/fab_tomato"
+        app:layout_constraintTop_toBottomOf="@+id/fab_tomato"
+        tools:text="71%" />
+
+    <TextView
+        android:id="@+id/textView_similar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/similar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintEnd_toEndOf="@+id/fab_similar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/fab_similar"
+        app:layout_constraintTop_toBottomOf="@+id/fab_similar"
+        tools:text="Similar" />
 
 </android.support.constraint.ConstraintLayout>
